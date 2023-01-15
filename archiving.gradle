@@ -1,0 +1,14 @@
+task copyDocs(type: Copy) {
+    from "src"
+    into "build/docs"
+    include "**/*md"
+    includeEmptyDirs = false
+}
+
+task createZip(type: Zip) {
+
+    dependsOn(copyDocs)
+    from "build/docs"
+    archiveFileName = "doc-include-example-file.zip"
+    destinationDirectory = file("build/dist")
+}
