@@ -1,17 +1,19 @@
 apply plugin: "base"
 
 
-task copyDocs(type: Copy) {
-    from "src"
-    into "build/docs"
-    include "**/*md"
-    includeEmptyDirs = false
+task tarTextFiles(type: Tar) { // Tar Domain Type
+    from 'source' // from directory
+    include '*.txt' // any txt extension files
+    into 'text'
+    rename '(.+)\\.txt', '$1.text' // regex - rename any kind of txt file to 'it name'.text
+    compression Compression.GZIP
+    // Compression Domain Type Type -> has enum Value = GZIP ( others BZIP2 , NONE from documentation )
+
+    doFirst {
+        println 'Creating TAR file...'
+    }
 }
 
-task createZip(type: Zip) {
-    from "build/docs"
-    dependsOn(copyDocs)
-    // not required anymore - provided by base plugin!! ( core plugins of gradle )
-    // archiveFileName = "doc-include-example-file.zip"
-    // destinationDirectory = file("build/dist")
+task createArchive {
+    dependsOn(tarTextFiles)
 }

@@ -1,14 +1,1 @@
 apply from: "archiving.gradle"
-
-task hello {
-    doLast {
-        println('Hello')
-    }
-}
-
-task helloWorld {
-    dependsOn(hello)
-    doLast {
-        println (', World ! version = ' + version)
-    }
-}
