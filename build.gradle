@@ -10,3 +10,11 @@ task helloWorld {
         println (', World ! version = ' + version)
     }
 }
+
+
+task copyDocs(type: Copy) {
+    from "src"
+    into "build/docs"
+    include "**/*md"
+    includeEmptyDirs = false
+}
