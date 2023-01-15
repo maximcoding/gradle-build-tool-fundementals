@@ -1,1 +1,13 @@
 apply from: "archiving.gradle"
+
+repositories {
+    //remote for resolving dependencies
+//  jcenter()
+    mavenCentral()
+
+    // file based repos
+    flatDir {
+        dirs 'lib'
+    }
+
+}
