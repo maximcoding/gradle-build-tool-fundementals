@@ -1,3 +1,6 @@
+apply plugin: "base"
+
+
 task copyDocs(type: Copy) {
     from "src"
     into "build/docs"
@@ -6,9 +9,9 @@ task copyDocs(type: Copy) {
 }
 
 task createZip(type: Zip) {
-
-    dependsOn(copyDocs)
     from "build/docs"
-    archiveFileName = "doc-include-example-file.zip"
-    destinationDirectory = file("build/dist")
+    dependsOn(copyDocs)
+    // not required anymore - provided by base plugin!! ( core plugins of gradle )
+    // archiveFileName = "doc-include-example-file.zip"
+    // destinationDirectory = file("build/dist")
 }
