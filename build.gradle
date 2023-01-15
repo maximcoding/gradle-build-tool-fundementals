@@ -1,12 +1,12 @@
-task helloWorld {
+task hello {
     doLast {
-        println('Hello World')
+        println('Hello')
     }
 }
 
-//task He {
-//    dependsOn(hello)
-//    doLast {
-//        println(', world ! version =' + version)
-//    }
-//}
+task world {
+    dependsOn(hello)
+    doLast {
+        println(', World !')
+    }
+}
