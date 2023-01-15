@@ -4,9 +4,9 @@ task hello {
     }
 }
 
-task world {
+task helloWorld {
     dependsOn(hello)
     doLast {
-        println(', World !')
+        println (', World ! version = ' + version)
     }
 }
