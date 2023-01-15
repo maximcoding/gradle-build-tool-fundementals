@@ -20,6 +20,9 @@ task copyDocs(type: Copy) {
 }
 
 task createZip(type: Zip) {
+
+    dependsOn(copyDocs)
+
     from "build/docs"
     archiveFileName = "doc-include-example-file.zip"
     destinationDirectory = file("build/dist")
