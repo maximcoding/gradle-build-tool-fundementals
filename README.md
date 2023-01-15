@@ -1,1 +1,1 @@
-# gradle-build-tool-fundementals
+# Gradle Build Tool Course
