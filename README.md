@@ -1,4 +1,4 @@
-# Gradle Jooq with mysql configuration 
+# Simple gradle example
 
 ```
 buildscript {
