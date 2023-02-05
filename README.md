@@ -1,1 +1,1 @@
-# Gradle Build Tool Course
+#java #gradle #jooq #generator #mysql #configuration
