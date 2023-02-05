@@ -1,1 +1,1 @@
-Java gradle configuration ,jooq code generator , mysql connector setup
+##Java gradle with jooq code generator and mysql jdbc connector .
