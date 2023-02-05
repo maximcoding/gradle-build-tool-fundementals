@@ -1,4 +1,4 @@
-# Gradle jooq codegen
+# Gradle Jooq with mysql configuration 
 
 ```
 buildscript {
