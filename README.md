@@ -1,1 +1,1 @@
-# Simple gradle build example
+# Gradle build example
