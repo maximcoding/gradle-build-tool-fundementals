@@ -1,5 +1,6 @@
 # Gradle jooq codegen
 
+```
 buildscript {
     repositories {
         mavenLocal()
