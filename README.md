@@ -1,1 +1,1 @@
-# Gradle jooq codegen mysql build configuration .
+# Simple gradle build example
