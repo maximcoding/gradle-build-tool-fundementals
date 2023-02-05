@@ -1,1 +1,1 @@
-# Gradle build example
+# Gradle jooq codegen
