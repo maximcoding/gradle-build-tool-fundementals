@@ -1,19 +1,9 @@
 # Gradle jooq codegen
 
-```buildscript {
+buildscript {
     repositories {
-        maven {
-            name "Artifactory-plugins"
-            credentials {
-                username = "${artifactory_user}"
-                password = "${artifactory_password}"
-            }
-            url "$artifactory_contextUrl/gradle-plugin-local/"
-            allowInsecureProtocol true
-        }
         mavenLocal()
         mavenCentral()
-        jcenter()
     }
     dependencies {
         classpath 'org.jooq:jooq-codegen:3.16.2'
@@ -22,10 +12,9 @@
 }
 
 plugins {
-    id 'java-library'
-    id 'com.jfrog.artifactory' version '4.29.4'
     id 'nu.studer.jooq' version '8.1'
 }
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
@@ -42,14 +31,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.locationtech.proj4j:proj4j:1.2.2'
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
-    implementation 'org.apache.httpcomponents:httpclient:4.5.14'
-    implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testImplementation 'junit:junit:4.13.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // JOOQ & MySQL
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.32'
     implementation group: 'org.jooq', name: 'jooq', version: '3.16.2'
@@ -105,4 +86,4 @@ jooq {
             }
         }
     }
-}``
+}
